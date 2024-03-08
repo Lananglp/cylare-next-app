@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-zinc-800 rounded-xl;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-500 rounded-xl;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
