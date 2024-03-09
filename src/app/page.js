@@ -1,17 +1,58 @@
+'use client'
+import { useEffect, useState } from "react";
 import Container from "./components/layouts/Container";
 import Header from "./components/layouts/Header";
 import LeftSidebar from "./components/layouts/left-sidebar/LeftSidebar";
+import RightSidebar from "./components/layouts/right-sidebar/RightSidebar";
 
 export default function Home() {
+
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [theme, setTheme] = useState(() => {return localStorage.getItem("theme") ? localStorage.getItem("theme") : null});
+
+  const toggleDark = () => {
+    localStorage.setItem("theme", "dark");
+    setTheme(localStorage.getItem("theme"));
+  }
+
+  const toggleLight = () => {
+    localStorage.clear("theme");
+    setTheme(null);
+  }
+
+  const toggleAuto = () => {
+    if (systemTheme) {
+      localStorage.setItem("theme", "dark");
+      setTheme(localStorage.getItem("theme"));
+    } else {
+      localStorage.clear("theme");
+      setTheme(null);
+    }
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+
+    console.log(theme);
+  }, [theme]);
 
   return (
     <div>
       <Header/>  
       <Container>
+        <button onClick={toggleDark} className="m-4 border text-5xl">dark</button>
+        <button onClick={toggleLight} className="m-4 border text-5xl">light</button>
+        <button onClick={toggleAuto} className="m-4 border text-5xl">Auto</button>
         <div className="mt-4">
-          <div className="flex flex-row">
+          <div className="grid grid-cols-12">
             <LeftSidebar/>
-            <div className="xl:basis-1/2">
+            <div className="col-span-12 lg:col-span-8 xl:col-span-7">
               <div className="p-4">
                 <div className="pb-8 mb-8 border-b border-zinc-800">
                   <h1 className="mb-2 text-3xl font-medium">Introduction</h1>
@@ -63,9 +104,7 @@ export default function Home() {
                 <p className="mb-4 text-zinc-400">On the right side of the screen, you&apos;ll see a table of contents that makes it easier to navigate between sections of a page. If you need to quickly find a page, you can use the search bar at the top, or the search shortcut (Ctrl+K or Cmd+K).</p>
               </div>
             </div>
-            <div className="xl:basis-1/4 py-32 bg-yellow-500/50">
-              
-            </div>
+            <RightSidebar/>
           </div>
         </div>
       </Container>

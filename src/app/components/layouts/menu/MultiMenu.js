@@ -12,27 +12,20 @@ function MultiMenu(props) {
     }
 
     useEffect(() => {
-        // const dropItem = document.getElementById("dropDown"+{index});
         if (show) {
-            dropdown.current.classList.remove("hidden");
-            setTimeout(() => {
-                dropdown.current.classList.remove("-translate-y-full");
-                dropdown.current.classList.add("-translate-y-0");
-            }, 1);
+            dropdown.current.classList.remove("max-h-0", "opacity-0");
+            dropdown.current.classList.add("max-h-lvh", "opacity-100");
         } else {
-            dropdown.current.classList.remove("-translate-y-0");
-            dropdown.current.classList.add("-translate-y-full");
-            setTimeout(() => {
-                dropdown.current.classList.add("hidden");
-            }, 200);
+            dropdown.current.classList.remove("max-h-lvh", "opacity-100");
+            dropdown.current.classList.add("max-h-0", "opacity-0");
         }
     }, [show, dropdown]);
 
   return (
     <div className="ps-2">
-        <button onClick={toggleShow} className="mb-2 flex justify-between items-center text-zinc-400 hover:text-white duration-200 w-full">Routing <i className={`${show && 'rotate-90'} fa fa-fw fa-sm fa-chevron-right duration-200`} /></button>
+        <button onClick={toggleShow} className="mb-2 flex justify-between items-center text-zinc-400 hover:text-white duration-500 w-full">Routing <i className={`${show && 'rotate-90'} fa fa-fw fa-sm fa-chevron-right duration-200`} /></button>
         <div className="overflow-hidden mt-2">
-            <div ref={dropdown} className="hidden -translate-y-full border-l border-zinc-800 ms-4 duration-200">
+            <div ref={dropdown} className="max-h-0 opacity-0 border-l border-zinc-800 ms-4 transition-all duration-500">
                 <ul className="flex flex-col gap-y-2">
                     <li><a href="#" className="ps-4 text-zinc-400 hover:text-white hover:translate-x-1 duration-200 block w-full">Pages and Layouts</a></li>
                     <li><a href="#" className="ps-4 text-zinc-400 hover:text-white hover:translate-x-1 duration-200 block w-full">Dynamic Routes</a></li>
