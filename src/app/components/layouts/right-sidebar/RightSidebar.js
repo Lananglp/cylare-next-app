@@ -50,7 +50,7 @@ function RightSidebar() {
   return (
       <div className="hidden lg:block lg:col-span-3 transition-all duration-500">
           <div className="sticky top-[4.5rem]">
-                <div className="overflow-y-scroll h-[88lvh] px-4 pb-8">
+                <div className="overflow-y-scroll h-[88vh] px-4 pb-8">
                     <div className='sticky top-0 z-10 bg-black border-b border-zinc-800 py-4 mb-8'>
                         <div className='flex justify-between items-center'>
                             {isOnline ? <p className='text-xs'><i className='fa fa-xs fa-fw fa-circle text-green-400 me-1'/> Online</p> : <p className='text-xs'><i className='fa fa-xs fa-fw fa-circle text-red-400 me-1'/> Offline</p>}

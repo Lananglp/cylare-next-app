@@ -67,7 +67,7 @@ function LeftSidebar() {
 
     <div className={`${show ? 'show' : 'hidden'} fixed z-10 inset-0 bg-black/50`}></div>
     <div ref={menuRef} className="fixed md:static z-20 start-0 top-0 overflow-hidden md:overflow-visible h-screen md:h-auto md:col-span-3 lg:col-span-3">
-        <div ref={menuTransitionRef} className={`${show ? 'w-72 opacity-100' : 'w-0 opacity-50'} md:opacity-100 md:w-full pt-28 md:pt-0 bg-black pb-2 md:pb-0 h-full border-r md:border-r-0 border-zinc-800 transition-[width, opacity]`}>
+        <div ref={menuTransitionRef} className={`${show ? 'w-72 opacity-100' : 'w-0 opacity-50'} md:opacity-100 md:w-full pt-28 md:pt-0 bg-black pb-8 md:pb-0 h-full border-r md:border-r-0 border-zinc-800 transition-[width, opacity]`}>
             <div className="sticky top-[4.5rem] h-full md:h-[80vh] lg:h-[85vh] xl:h-[88vh]">
                 <div className='relative overflow-x-hidden overflow-y-auto md:overflow-y-scroll h-full'>
                     <div className="mx-4 py-4 sticky z-10 top-0 pb-4 bg-black border-b border-zinc-800 flex items-center gap-2">
@@ -79,7 +79,7 @@ function LeftSidebar() {
                             <p className="text-zinc-400 text-xs">lananglanusaputera@gmail.com</p>
                         </div>
                     </div>
-                    <div className="px-4 pb-8">
+                    <div className="px-4 pb-12">
                         <div className='mt-4 flex flex-col gap-y-3 text-sm'>
                             <SingleMenu href="#" type="mainMenu" text="Getting Started"/>
                             <SingleMenu href="#" type="subMenu" text="Installation"/>

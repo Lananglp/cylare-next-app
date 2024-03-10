@@ -14,9 +14,9 @@ function MultiMenu(props) {
     useEffect(() => {
         if (show) {
             dropdown.current.classList.remove("max-h-0", "opacity-0");
-            dropdown.current.classList.add("max-h-lvh", "opacity-100");
+            dropdown.current.classList.add("max-h-screen", "opacity-100");
         } else {
-            dropdown.current.classList.remove("max-h-lvh", "opacity-100");
+            dropdown.current.classList.remove("max-h-screen", "opacity-100");
             dropdown.current.classList.add("max-h-0", "opacity-0");
         }
     }, [show, dropdown]);
