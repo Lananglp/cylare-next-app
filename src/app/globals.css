@@ -44,5 +44,5 @@ body {
 } */
 
 body {
-  @apply bg-white dark:bg-black text-black dark:text-white text-base;
+  @apply bg-black text-white text-base;
 }
