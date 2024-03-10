@@ -2,8 +2,8 @@ import React from 'react'
 
 function Container({children}) {
   return (
-    <div className='container mx-auto'>
-        <div className='md:mx-8 lg:mx-12 xl:mx-24'>
+    <div className='xl:container xl:mx-auto'>
+        <div className='xl:mx-32'>
             {children}
         </div>
     </div>

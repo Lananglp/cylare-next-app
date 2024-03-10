@@ -71,8 +71,8 @@ export default function Header() {
           </nav>
       </header> */}
       <header ref={navbarRef} className="fixed z-50 inset-x-0 top-0 border-b border-zinc-800 bg-black">
-          <nav className="container mx-auto">
-          <div className="md:mx-8 lg:mx-12 xl:mx-24 md:flex md:justify-between md:items-center py-4 px-4">
+          <nav className="xl:container xl:mx-auto">
+          <div className="xl:mx-32 md:flex md:justify-between md:items-center py-4 px-4">
               <div className="flex justify-between items-center w-full">
               <a href="/" className="block">Cylare Next</a>
               <button onClick={toggleNavbar} className={`block ${!navbar && 'md:hidden'} text-white hover:text-zinc-400 duration-200`}><i className={`fa fa-fw fa-sm ${navbar ? 'fa-close' : 'fa-bars'}`}/></button>
