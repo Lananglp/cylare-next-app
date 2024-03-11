@@ -1,46 +1,22 @@
-'use client'
-import { useEffect, useState } from "react";
 import MainLayout from "./components/layouts/MainLayout";
+import Dropdown, { DropdownItem } from "./components/Dropdown";
 
 export default function Home() {
-
-  // const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  // const [theme, setTheme] = useState(() => {return localStorage.getItem("theme") ? localStorage.getItem("theme") : null});
-
-  // const toggleDark = () => {
-  //   localStorage.setItem("theme", "dark");
-  //   setTheme(localStorage.getItem("theme"));
-  // }
-
-  // const toggleLight = () => {
-  //   localStorage.clear("theme");
-  //   setTheme(null);
-  // }
-
-  // const toggleAuto = () => {
-  //   if (systemTheme) {
-  //     localStorage.setItem("theme", "dark");
-  //     setTheme(localStorage.getItem("theme"));
-  //   } else {
-  //     localStorage.clear("theme");
-  //     setTheme(null);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   const root = document.documentElement;
-
-  //   if (theme === "dark") {
-  //     root.classList.add("dark");
-  //   } else {
-  //     root.classList.remove("dark");
-  //   }
-
-  //   console.log(theme);
-  // }, [theme]);
-
   return (
     <MainLayout title="Introduction X" description="Welcome to the Next.js documentation! X">
+
+      <Dropdown className="mb-4">
+        <DropdownItem id="1" title="Dropdown example no 1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus veniam corporis ut hic optio voluptatum ipsam delectus doloremque ducimus?</p>
+        </DropdownItem>
+        <DropdownItem id="2" title="Dropdown example no 2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam quia ipsum molestiae deserunt, quasi, sunt libero totam corrupti error animi deleniti nihil quidem? Quasi maxime cupiditate nisi sint nostrum.</p>
+        </DropdownItem>
+        <DropdownItem id="3" title="Dropdown example no 3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo cum at distinctio sapiente adipisci ullam amet placeat veritatis, voluptatem accusantium harum ad, excepturi illum suscipit ipsum aliquam eius error eaque natus. Quia animi consectetur, voluptate explicabo voluptatibus in. Rerum.</p>
+        </DropdownItem>
+      </Dropdown>
+
       <h2 className="mb-4 text-xl font-medium">What is Next.js?</h2>
       <p className="mb-4 text-zinc-400">Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.</p>
       <p className="mb-4 text-zinc-400">Under the hood, Next.js also abstracts and automatically configures tooling needed for React, like bundling, compiling, and more. This allows you to focus on building your application instead of spending time with configuration.</p>
@@ -85,9 +61,6 @@ export default function Home() {
       <h2 className="mb-4 text-xl font-medium">How to Use These Docs</h2>
       <p className="mb-4 text-zinc-400">On the left side of the screen, you&apos;ll find the docs navbar. The pages of the docs are organized sequentially, from basic to advanced, so you can follow them step-by-step when building your application. However, you can read them in any order or skip to the pages that apply to your use case.</p>
       <p className="mb-4 text-zinc-400">On the right side of the screen, you&apos;ll see a table of contents that makes it easier to navigate between sections of a page. If you need to quickly find a page, you can use the search bar at the top, or the search shortcut (Ctrl+K or Cmd+K).</p>
-      {/* <button onClick={toggleDark} className="m-4 border text-5xl">dark</button>
-                <button onClick={toggleLight} className="m-4 border text-5xl">light</button>
-                <button onClick={toggleAuto} className="m-4 border text-5xl">Auto</button> */}
     </MainLayout>
   );
 }
