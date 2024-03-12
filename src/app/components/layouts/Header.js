@@ -18,11 +18,11 @@ export default function Header() {
 
     if (navbar) {
       navRef.current.classList.remove("max-h-0", "opacity-0");
-      navRef.current.classList.add(`max-h-[${getHeight.toString()}px]`, "opacity-100");
+      navRef.current.classList.add("max-h-screen", "opacity-100");
 
       navRef.current.classList.add("duration-500");
     } else {
-      navRef.current.classList.remove(`max-h-[${getHeight.toString()}px]`, "opacity-100");
+      navRef.current.classList.remove("max-h-screen", "opacity-100");
       navRef.current.classList.add("max-h-0", "opacity-0");
       
       setTimeout(() => {

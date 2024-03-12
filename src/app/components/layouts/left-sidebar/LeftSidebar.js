@@ -45,6 +45,7 @@ function LeftSidebar() {
         window.addEventListener("mousedown", clickInOutside);
 
         return () => {
+            body.classList.remove("overflow-hidden");
             document.addEventListener("mousedown", clickInOutside);
             window.addEventListener("resize", resizeMenu);
         };

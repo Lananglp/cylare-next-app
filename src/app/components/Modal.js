@@ -45,6 +45,7 @@ function Modal(props) {
         document.addEventListener("mousedown", clickInOutside);
 
         return () => {
+            body.classList.remove("overflow-hidden");
             document.addEventListener("mousedown", clickInOutside);
         }
 
