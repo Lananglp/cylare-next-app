@@ -7,15 +7,16 @@ function Modal(props) {
     const modalRef = useRef(null);
     const modalContentRef = useRef(null);
     const closeButtonRef = useRef(null);
-
+    
+    
     useEffect(() => {
-
+        
         const body = document.body;
 
         if (onOpen) {
-            body.classList.add("overflow-hidden");
             modalRef.current.classList.remove("hidden");
             modalRef.current.classList.add("flex");
+            body.style.overflow = 'hidden';
             setTimeout(() => {
                 modalRef.current.classList.remove("opacity-0");
                 modalRef.current.classList.add("opacity-100");
@@ -23,8 +24,8 @@ function Modal(props) {
         } else {
             modalRef.current.classList.remove("opacity-100");
             modalRef.current.classList.add("opacity-0");
+            body.style.overflow = '';
             setTimeout(() => {
-                body.classList.remove("overflow-hidden");
                 modalRef.current.classList.remove("flex");
                 modalRef.current.classList.add("hidden");
             }, 500);
@@ -45,8 +46,8 @@ function Modal(props) {
         document.addEventListener("mousedown", clickInOutside);
 
         return () => {
-            body.classList.remove("overflow-hidden");
             document.addEventListener("mousedown", clickInOutside);
+            body.style.overflow = '';
         }
 
     }, [onOpen, onClose, header, modalRef, modalContentRef, closeButtonRef]);
