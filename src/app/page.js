@@ -13,7 +13,8 @@ export default function Home() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam quia ipsum molestiae deserunt, quasi, sunt libero totam corrupti error animi deleniti nihil quidem? Quasi maxime cupiditate nisi sint nostrum.</p>
         </DropdownItem>
         <DropdownItem id="3" title="Dropdown example no 3">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo cum at distinctio sapiente adipisci ullam amet placeat veritatis, voluptatem accusantium harum ad, excepturi illum suscipit ipsum aliquam eius error eaque natus. Quia animi consectetur, voluptate explicabo voluptatibus in. Rerum.</p>
+          <p className="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo cum at distinctio sapiente adipisci ullam amet placeat veritatis, voluptatem accusantium harum ad, excepturi illum suscipit ipsum aliquam eius error eaque natus. Quia animi consectetur, voluptate explicabo voluptatibus in. Rerum.</p>
+          <p className="text-9xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo cum at distinctio sapiente adipisci ullam amet placeat veritatis, voluptatem accusantium harum ad, excepturi illum suscipit ipsum aliquam eius error eaque natus. Quia animi consectetur, voluptate explicabo voluptatibus in. Rerum.</p>
         </DropdownItem>
       </Dropdown>
 

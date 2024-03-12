@@ -14,13 +14,15 @@ export default function Header() {
   };
 
   useEffect(() => {
+    const getHeight = navRef.current && navRef.current.scrollHeight;
+
     if (navbar) {
       navRef.current.classList.remove("max-h-0", "opacity-0");
-      navRef.current.classList.add("max-h-screen", "opacity-100");
+      navRef.current.classList.add(`max-h-[${getHeight}px]`, "opacity-100");
 
       navRef.current.classList.add("duration-500");
     } else {
-      navRef.current.classList.remove("max-h-screen", "opacity-100");
+      navRef.current.classList.remove(`max-h-[${getHeight}px]`, "opacity-100");
       navRef.current.classList.add("max-h-0", "opacity-0");
       
       setTimeout(() => {
@@ -59,14 +61,14 @@ export default function Header() {
               <a href="/" className="block">Cylare Next</a>
               <button onClick={toggleNavbar} className={`block ${!navbar && 'md:hidden'} text-white hover:text-zinc-400 duration-200`}><i className={`fa fa-fw fa-sm ${navbar ? 'fa-close' : 'fa-bars'}`}/></button>
               </div>
-              <div ref={navRef} className="max-h-0 opacity-0 md:opacity-100 md:max-h-screen overflow-hidden md:overflow-visible transition-[max-height, opacity]">
+              <div ref={navRef} className="max-h-0 opacity-0 md:opacity-100 md:max-h-full overflow-hidden md:overflow-visible transition-[max-height, opacity]">
                 <ul className={`md:flex md:items-center md:gap-4 pt-4 md:pt-0 mt-4 md:mt-0 border-t md:border-t-0 border-zinc-800`}>
                   <li><SingleMenu href="#" type="subMenu" text="Home"/></li>
                   <li><SingleMenu href="#" type="subMenu" text="Docs"/></li>
                   <li><SingleMenu href="#" type="subMenu" text="Templates"/></li>
                   <li><SingleMenu href="#" type="subMenu" text="Blog"/></li>
                   <li><SingleMenu href="#" type="subMenu" text="Abouts"/></li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2 py-2 md:py-0">
                     <SignIn/>
                     <button className="btn btn-outline-primary">Sign Up</button>
                   </li>

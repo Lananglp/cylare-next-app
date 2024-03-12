@@ -76,8 +76,30 @@ function RightSidebar() {
                         <SingleMenu href="#" type="subMenu" text="Pre-Requisite Knowledge" />
                         <SingleMenu href="#" type="subMenu" text="Accessibility" />
                         <SingleMenu href="#" type="subMenu" text="Join our Community" />
-                        <MultiMenu />
-                        <MultiMenu />
+                        <MultiMenu>
+                            <SingleMenu href="#" type="subMenu" text="Pages and Layouts"/>
+                            <SingleMenu href="#" type="subMenu" text="Dynamic Routes"/>
+                            <SingleMenu href="#" type="subMenu" text="Linking and Navigating"/>
+                            <SingleMenu href="#" type="subMenu" text="Redirecting"/>
+                            <SingleMenu href="#" type="subMenu" text="Custom App"/>
+                            <SingleMenu href="#" type="subMenu" text="Custom Document"/>
+                            <SingleMenu href="#" type="subMenu" text="API Routes"/>
+                            <SingleMenu href="#" type="subMenu" text="Custom Errors"/>
+                            <SingleMenu href="#" type="subMenu" text="Internationalization"/>
+                            <SingleMenu href="#" type="subMenu" text="Middleware"/>
+                        </MultiMenu>
+                        <MultiMenu>
+                            <SingleMenu href="#" type="subMenu" text="Pages and Layouts"/>
+                            <SingleMenu href="#" type="subMenu" text="Dynamic Routes"/>
+                            <SingleMenu href="#" type="subMenu" text="Linking and Navigating"/>
+                            <SingleMenu href="#" type="subMenu" text="Redirecting"/>
+                            <SingleMenu href="#" type="subMenu" text="Custom App"/>
+                            <SingleMenu href="#" type="subMenu" text="Custom Document"/>
+                            <SingleMenu href="#" type="subMenu" text="API Routes"/>
+                            <SingleMenu href="#" type="subMenu" text="Custom Errors"/>
+                            <SingleMenu href="#" type="subMenu" text="Internationalization"/>
+                            <SingleMenu href="#" type="subMenu" text="Middleware"/>
+                        </MultiMenu>
                     </div>
               </div>
           </div>

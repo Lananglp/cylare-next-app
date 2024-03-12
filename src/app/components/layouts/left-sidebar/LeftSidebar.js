@@ -85,9 +85,42 @@ function LeftSidebar() {
                             <SingleMenu href="#" type="subMenu" text="Installation"/>
                             <SingleMenu href="#" type="subMenu" text="Project Structure"/>
                             <SingleMenu href="#" type="mainMenu" text="Building Your Application"/>
-                            <MultiMenu/>
-                            <MultiMenu/>
-                            <MultiMenu/>
+                            <MultiMenu>
+                                <SingleMenu href="#" type="subMenu" text="Pages and Layouts"/>
+                                <SingleMenu href="#" type="subMenu" text="Dynamic Routes"/>
+                                <SingleMenu href="#" type="subMenu" text="Linking and Navigating"/>
+                                <SingleMenu href="#" type="subMenu" text="Redirecting"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom App"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom Document"/>
+                                <SingleMenu href="#" type="subMenu" text="API Routes"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom Errors"/>
+                                <SingleMenu href="#" type="subMenu" text="Internationalization"/>
+                                <SingleMenu href="#" type="subMenu" text="Middleware"/>
+                            </MultiMenu>
+                            <MultiMenu>
+                                <SingleMenu href="#" type="subMenu" text="Pages and Layouts"/>
+                                <SingleMenu href="#" type="subMenu" text="Dynamic Routes"/>
+                                <SingleMenu href="#" type="subMenu" text="Linking and Navigating"/>
+                                <SingleMenu href="#" type="subMenu" text="Redirecting"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom App"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom Document"/>
+                                <SingleMenu href="#" type="subMenu" text="API Routes"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom Errors"/>
+                                <SingleMenu href="#" type="subMenu" text="Internationalization"/>
+                                <SingleMenu href="#" type="subMenu" text="Middleware"/>
+                            </MultiMenu>
+                            <MultiMenu>
+                                <SingleMenu href="#" type="subMenu" text="Pages and Layouts"/>
+                                <SingleMenu href="#" type="subMenu" text="Dynamic Routes"/>
+                                <SingleMenu href="#" type="subMenu" text="Linking and Navigating"/>
+                                <SingleMenu href="#" type="subMenu" text="Redirecting"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom App"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom Document"/>
+                                <SingleMenu href="#" type="subMenu" text="API Routes"/>
+                                <SingleMenu href="#" type="subMenu" text="Custom Errors"/>
+                                <SingleMenu href="#" type="subMenu" text="Internationalization"/>
+                                <SingleMenu href="#" type="subMenu" text="Middleware"/>
+                            </MultiMenu>
                         </div>
                     </div>
                 </div>
