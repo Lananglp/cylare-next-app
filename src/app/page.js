@@ -1,9 +1,36 @@
+'use client'
 import MainLayout from "./components/layouts/MainLayout";
 import Dropdown, { DropdownItem } from "./components/Dropdown";
+import Modal from "./components/Modal";
+import { useState } from "react";
 
 export default function Home() {
+
+  const showCustomAlert = () => {
+      // Buat elemen div untuk pesan alert
+      var alertDiv = document.createElement("div");
+      alertDiv.setAttribute("class", "custom-alert");
+      alertDiv.innerHTML = "<i class='fa fa-fw fa-check'></i> Successfully show custom alert";
+
+      // Styling untuk alert
+      alertDiv.classList.add("translate-x-full", "fixed", "top-[4.5rem]", "w-72", "end-0", "z-[100]", "bg-blue-900", "text-white", "px-4", "py-2", "rounded-lg", "shadow-xl", "border", "border-zinc-800", "text-sm", "duration-500");
+
+      // Tambahkan elemen alert ke dalam body
+      document.body.appendChild(alertDiv);
+
+      // Sembunyikan alert setelah beberapa detik
+      setTimeout(() => {
+          alertDiv.style.display = "none";
+      }, 3000);
+  }
+
   return (
     <MainLayout title="Introduction X" description="Welcome to the Next.js documentation! X">
+
+      <div className="flex items-center gap-4">
+        <SignIn/>
+        <button onClick={showCustomAlert} className="btn btn-primary" type="button">Show my custom alert</button>
+      </div>
 
       <Dropdown className="mb-4">
         <DropdownItem id="1" title="Dropdown example no 1">
@@ -63,4 +90,46 @@ export default function Home() {
       <p className="mb-4 text-zinc-400">On the right side of the screen, you&apos;ll see a table of contents that makes it easier to navigate between sections of a page. If you need to quickly find a page, you can use the search bar at the top, or the search shortcut (Ctrl+K or Cmd+K).</p>
     </MainLayout>
   );
+}
+
+export const SignIn = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleModal = () => {
+    setShow(true);
+  }
+
+  const handleClose = () => {
+    setShow(false);
+  }
+
+  return (
+    <>
+      <button onClick={handleModal} type="button" className="btn btn-primary w-full">Sign In</button>
+
+      <Modal
+        onOpen={show}
+        onClose={handleClose}
+        header={true}
+        title="Sign In Cylare"
+      >
+        {/* <div className="flex justify-center items-center h-full">
+          <div className="text-center w-full py-12">
+            <h6 className="mb-2 text-3xl">Sign in</h6>
+            <p className="mb-12 text-sm text-zinc-400">Please enter your email and password to<br />process your sign in information</p>
+            <form>
+              <div className="flex flex-col gap-y-2">
+                <input type="text" className="px-2 py-1 rounded bg-zinc-950 ring-1 ring-zinc-800 focus:ring-blue-800 outline-none w-full duration-200 placeholder:text-sm" placeholder="Email"/>
+                <input type="password" className="px-2 py-1 rounded bg-zinc-950 ring-1 ring-zinc-800 focus:ring-blue-800 outline-none w-full duration-200 placeholder:text-sm" placeholder="Password"/>
+                <button type="submit" className="btn btn-primary">Sign In</button>
+              </div>
+            </form>
+            <p className="mt-4 text-sm text-zinc-400">Not have a account? <a href="#" className="text-blue-500 hover:text-blue-600 duration-200">Sign Up</a> now.</p>
+          </div>
+        </div> */}
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore repellendus ex eveniet fugiat labore, possimus, tenetur veritatis vel voluptatum minima doloribus. Laudantium dolorum, vero corporis quae alias debitis repellendus veritatis inventore sit magnam molestias aliquam, corrupti sint, dolor laboriosam tenetur. Vitae incidunt iusto repudiandae! Nobis rem modi nostrum? Vero, facilis?</p>
+      </Modal>
+    </>
+  )
 }
