@@ -221,7 +221,7 @@ export const SignIn = () => {
         title="Sign In Cylare"
       >
         <div className="flex justify-center items-center h-full">
-          <div className="text-center md:w-2/3">
+          <div className="text-center w-full py-12">
             <h6 className="mb-2 text-3xl">Sign in</h6>
             <p className="mb-12 text-sm text-zinc-400">Please enter your email and password to<br />process your sign in information</p>
             <form>
