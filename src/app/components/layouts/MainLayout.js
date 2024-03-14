@@ -12,7 +12,7 @@ export default function MainLayout(props) {
   return (
     <div>
       <Header/>
-      <Container>
+      <Container className="mb-4">
         <div className="mt-4">
           <div className="md:grid md:grid-cols-12">
             <LeftSidebar/>

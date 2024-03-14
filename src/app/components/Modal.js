@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 function Modal(props) {
 
@@ -15,7 +15,6 @@ function Modal(props) {
 
         if (onOpen) {
             modalRef.current.classList.remove("hidden");
-            // modalRef.current.classList.add("flex");
             body.style.overflow = 'hidden';
             setTimeout(() => {
                 modalRef.current.classList.remove("opacity-0");
@@ -26,8 +25,9 @@ function Modal(props) {
             modalRef.current.classList.add("opacity-0");
             body.style.overflow = '';
             setTimeout(() => {
-                // modalRef.current.classList.remove("flex");
-                modalRef.current.classList.add("hidden");
+                if (modalRef.current && modalRef.current.classList.add("hidden")) {
+                    modalRef.current.classList.add("hidden");
+                }
             }, 500);
         }
 

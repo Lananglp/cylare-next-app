@@ -27,7 +27,9 @@ function LeftSidebar() {
 
             menuRef.current.classList.add("transition", "duration-500");
             setTimeout(() => {
-                menuRef.current.classList.remove("transition", "duration-500");
+                if (menuRef.current && menuRef.current.classList.remove("transition", "duration-500")) {
+                    menuRef.current.classList.remove("transition", "duration-500");
+                }
             }, 500);
         }
 

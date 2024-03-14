@@ -9,8 +9,6 @@ function SingleMenu(props) {
 
     const route = usePathname();
 
-    console.log(route);
-
   return (
     <Link href={href} className={`
       ${type === "mainMenu" && `mt-4 ${href === route ? 'link-primary' : 'text-white hover:text-zinc-400'}`} 

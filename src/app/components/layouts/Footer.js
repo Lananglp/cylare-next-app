@@ -3,7 +3,7 @@ import SingleMenu from './menu/SingleMenu'
 
 function Footer() {
   return (
-      <footer className="xl:container xl:mx-auto mt-8 border-t border-zinc-800">
+      <footer className="xl:container xl:mx-auto border-t border-zinc-800">
           <div className="xl:mx-32 md:grid md:grid-cols-12 gap-x-12 px-4 py-8">
               <div className="md:col-span-2 flex md:flex-col justify-between md:justify-normal items-center md:items-start gap-y-0 md:gap-y-4 w-full md:w-auto mb-8 md:mb-0">
                   <a href="/" className="block">Cylare Next</a>
