@@ -84,7 +84,7 @@ function LeftSidebar() {
                     </div>
                     <div className="px-4 pb-12">
                         <div className='mt-4 flex flex-col gap-y-3 text-sm'>
-                            <SingleMenu href="#" type="mainMenu" text="Getting Started"/>
+                            <SingleMenu href="/docs" type="mainMenu" text="Getting Started"/>
                             <SingleMenu href="#" type="subMenu" text="Installation"/>
                             <SingleMenu href="#" type="subMenu" text="Project Structure"/>
                             <SingleMenu href="#" type="mainMenu" text="Building Your Application"/>

@@ -123,8 +123,8 @@ export default function Header() {
               <button onClick={toggleNavbar} className={`block ${!navbar && 'md:hidden'} text-white hover:text-zinc-400 duration-200`}><i className={`fa fa-fw fa-sm ${navbar ? 'fa-close' : 'fa-bars'}`} /></button>
             </div>
             <ul className="hidden md:flex md:items-center md:gap-4">
-              <li><SingleMenu href="#" type="subMenu" text="Home" /></li>
-              <li><SingleMenu href="#" type="subMenu" text="Docs" /></li>
+              <li><SingleMenu href="/" type="subMenu" text="Home" /></li>
+              <li><SingleMenu href="/docs" type="subMenu" text="Docs" /></li>
               <li><SingleMenu href="#" type="subMenu" text="Templates" /></li>
               <li><SingleMenu href="#" type="subMenu" text="Blog" /></li>
               <li><SingleMenu href="#" type="subMenu" text="Abouts" /></li>
@@ -143,8 +143,8 @@ export default function Header() {
       <nav className={`${navbar ? 'translate-x-0' : 'translate-x-full'} fixed md:hidden z-50 end-0 inset-y-0 transition duration-500`}>
         <button onClick={closeNavbar} className={`${navbar ? '-start-10' : '-start-0'} absolute top-1/2 -translate-y-1/2 bg-zinc-950 hover:bg-zinc-900 border border-zinc-800 hover:border-zinc-900 rounded px-2 py-12 text-white hover:text-zinc-400 duration-200`}><i className="fa fa-fw fa-sm fa-angles-right"/></button>
         <div ref={navRef} className="w-72 p-4 border-l border-l-zinc-800 bg-black h-full flex flex-col gap-4 overflow-y-scroll">
-          <SingleMenu href="#" type="subMenu" text="Home" />
-          <SingleMenu href="#" type="subMenu" text="Docs" />
+          <SingleMenu href="/" type="subMenu" text="Home" />
+          <SingleMenu href="/docs" type="subMenu" text="Docs" />
           <SingleMenu href="#" type="subMenu" text="Templates" />
           <SingleMenu href="#" type="subMenu" text="Blog" />
           <SingleMenu href="#" type="subMenu" text="Abouts" />

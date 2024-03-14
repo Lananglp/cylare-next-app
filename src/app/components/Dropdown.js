@@ -33,7 +33,7 @@ export const DropdownItem = (props) => {
   return (
     <div>
         <button onClick={() => onToggle(id)} className="px-4 py-3 my-1 text-zinc-400 hover:text-white border-b border-zinc-800 flex justify-between items-center w-full duration-200">
-          <p className={isOpen ? 'text-white' : 'text-zinc-400'}>{title}</p><i className={`${isOpen && 'rotate-90'} fa fa-xs fa-fw fa-chevron-right duration-200`}/>
+          <p className={`${isOpen ? 'text-primary' : 'text-zinc-400'} duration-200`}>{title}</p><i className={`${isOpen && 'rotate-90'} fa fa-xs fa-fw fa-chevron-right duration-200`}/>
         </button>
         <div ref={contentRef} style={{maxHeight: isOpen ? `${height}px` : '0px'}} className={`${isOpen ? 'opacity-100' : 'opacity-50'} overflow-hidden transition-[max-height, opacity] duration-500`}>
           <div className="text-zinc-400 p-4">

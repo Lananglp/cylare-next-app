@@ -125,7 +125,7 @@ export const SignIn = () => {
                 <button type="submit" className="btn btn-primary">Sign In</button>
               </div>
             </form>
-            <p className="mt-4 text-sm text-zinc-400">Not have a account? <a href="#" className="text-blue-500 hover:text-blue-600 duration-200">Sign Up</a> now.</p>
+            <p className="mt-4 text-sm text-zinc-400">Not have a account? <a href="#" className="link-primary duration-200">Sign Up</a> now.</p>
           </div>
         </div>
       </Modal>
